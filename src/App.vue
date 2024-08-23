@@ -19,7 +19,9 @@ export default {
     return {
       cities: ['Rio de Janeiro', 'Beijing', 'Los Angeles'],
       selectedCity: 'Rio de Janeiro',
-      weatherData: null
+      weatherData: null,
+      timezone: null,
+      lastUpdated: null
     }
   },
   mounted() {

@@ -37,7 +37,6 @@ export default {
     const cities = ref([])
     const showDropdown = ref(false)
     const searchedCity = ref('')
-    console.log(searchedCity)
     onMounted(() => {
       cities.value = SMALL_CITIES
     })
