@@ -7,7 +7,7 @@
         :key="hour.dt"
         class="flex-shrink-0 w-20 text-center"
       >
-        <p>{{ Math.round(hour.temp) }}°</p>
+        <p>{{ Math.round(hour.temp) }}°C</p>
         <img :src="getIconUrl(hour.weather[0].icon)" class="" />
         <p>{{ formatTime(hour.dt) }}</p>
       </div>

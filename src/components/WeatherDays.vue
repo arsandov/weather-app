@@ -12,7 +12,9 @@
           <p class="font-medium">{{ formatDate(day.dt) }}</p>
           <p class="text-sm text-gray-500 capitalize">{{ day.weather[0].description }}</p>
         </div>
-        <p class="text-lg font-semibold">{{ day.temp.day }}° / {{ day.temp.night }}°</p>
+        <p class="text-lg font-semibold">
+          {{ Math.round(day.temp.day) }}°C / {{ Math.round(day.temp.night) }}°C
+        </p>
       </div>
     </div>
   </div>
