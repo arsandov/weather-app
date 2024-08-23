@@ -30,12 +30,13 @@ export default {
   methods: {
     async fetchWeather(city) {
       const apiKey = import.meta.env.VITE_WEATHER_API_KEY
+      const WEATHER_API_URL = 'https://api.openweathermap.org/data/2.5'
       const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
+        `${WEATHER_API_URL}/weather?q=${city}&appid=${apiKey}&units=metric`
       )
       const { coord } = response.data
       const forecast = await axios.get(
-        `https://api.openweathermap.org/data/2.5/onecall?lat=${coord.lat}&lon=${coord.lon}&appid=${apiKey}&units=metric`
+        `${WEATHER_API_URL}/onecall?lat=${coord.lat}&lon=${coord.lon}&appid=${apiKey}&units=metric`
       )
       this.selectedCity = city
       this.weatherData = forecast.data
